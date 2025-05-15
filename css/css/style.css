@@ -1,26 +1,344 @@
-body {
-    font-family: Arial, sans-serif;
+
+/* Reset básico */
+/* Remove margens e preenchimentos padrão, aplica box-sizing e remove sublinhados de links */
+* {
     margin: 0;
     padding: 0;
-  } 
-  
-  header, footer {
-      background-color: #08039b;
-      color: white;
-      padding: 1em;
-      text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* Estilo base do corpo: define fonte, cor de fundo e cor do texto */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Cabeçalho */
+/* Define um layout flexível centralizado vertical e horizontalmente */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    height: 80px;
+    padding: 0 20px;
+}
+/* Estiliza o logotipo no cabeçalho com tamanho e posicionamento à esquerda */
+header a img {
+    width: 80px;
+    position: absolute;
+    left: 20px;
+}
+
+/* Menu de navegação */
+/* Layout horizontal com espaçamento entre links */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+/* Estilização dos links do menu: cor, tamanho e efeito hover */
+
+nav a {
+    color: #00008b;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #0056b3;
+}
+
+/* Conteúdo principal */
+/* Centraliza o conteúdo e aplica espaçamento interno */
+main {
+    text-align: center;
+    padding: 40px 20px 100px 20px;
+}
+/* Título principal do conteúdo */
+main h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+/* Imagens no conteúdo principal com responsividade e bordas arredondadas */
+main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Parágrafos com espaçamento superior e estilo de texto */
+main p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+/* Estilo para links dentro do conteúdo principal */
+main a {
+    text-decoration: underline;
+}
+main a:hover {
+    color: red;
+}
+
+/* Rodapé */
+/* Fixa o rodapé na parte inferior, com espaçamento e estilo flexível */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #001f5b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+/* Área das redes sociais no rodapé */
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Texto "Siga-nos" antes dos ícones */
+.redes-sociais span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+/* Tamanho dos ícones das redes sociais */
+.redes-sociais .icon {
+    width: 24px;
+    height: 24px;
+}
+/* Texto central do rodapé */
+footer p {
+    text-align: center;
+    flex: 1;
+    font-size: 14px;
+}
+/* Logotipo da Ford no rodapé */
+.footer-logo-ford {
+    width: 60px;
+    height: auto;
+}
+
+/* Tabela */
+/* Estilização da tabela com largura máxima e centralização */
+table {
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+/* Células da tabela com preenchimento e alinhamento */
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* Botões */
+/* Estilo básico de botões com cor, borda, animação e arredondamento */
+button,
+form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+/* Efeito hover para os botões */
+button:hover,
+form button:hover {
+    background-color: #0055a5;
+    transform: scale(1.05);
+}
+
+/* Página centralizada */
+/* Centraliza o conteúdo vertical e horizontalmente na tela */
+main.centralizado {
+    height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container do formulário */
+/* Layout flexível e centralizado com espaçamento entre os elementos */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+}
+/* Imagem ao lado do formulário */
+.form-container img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Formulário */
+/* Estilização do formulário e de seus elementos */
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 280px;
+    max-width: 350px;
+}
+/* Título do formulário */
+form h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* Campos do formulário */
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Destaque nos campos ao focar */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #003366;
+}
+/* Botão do formulário alinhado à direita */
+form button {
+    width: 50%;
+    align-self: flex-end;
+}
+
+/* Container da imagem ao lado do formulário */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.image-container img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+/* Responsividade */
+/* Estilos para telas com largura máxima de 768px */
+
+@media (max-width: 768px) {
+      /* Cabeçalho empilhado */
+    header {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
     }
-    
+    /* Cabeçalho empilhado */
+
+    header a img {
+        position: static;
+        margin-bottom: 10px;
+    }
+    /* Menu de navegação empilhado */
+
     nav {
-      margin: 1em 0;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
     }
-    
+    /* Ajustes no layout do formulário e imagem */
+
+    .form-container,
+    .form-wrapper,
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Reduz o espaçamento lateral do formulário */
+
+    .form-container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    /* Largura total no formulário */
+
+    form {
+        max-width: 100%;
+        width: 100%;
+    }
+    /* Botão ocupa toda a largura */
+
+    form button {
+        width: 100%;
+        align-self: stretch;
+    }
+    /* Tabela com fonte reduzida e largura total */
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+    /* Rodapé empilhado e centralizado */
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    /* Ícones das redes sociais centralizados */
+
+    .redes-sociais {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /* Espaçamento abaixo do logotipo */
+
+    .footer-logo-ford {
+        margin-top: 10px;
+    }
+}
+/* Estilos adicionais para telas muito pequenas */
+
+@media (max-width: 480px) {
     nav a {
-      margin: 0 1em;
-      color: #ffffff;
-      text-decoration: none;
+        font-size: 14px;
     }
-    
-    main {
-      padding: 2em;
+    /* Reduz tamanho dos títulos */
+
+    main h1 {
+        font-size: 22px;
     }
+    /* Reduz texto dos parágrafos */
+
+    main p {
+        font-size: 16px;
+    }
+    /* Campos do formulário com fonte menor */
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 13px;
+    }
+    /* Reduz padding das células da tabela */
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+}

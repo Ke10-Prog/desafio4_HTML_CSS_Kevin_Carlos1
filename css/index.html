@@ -1,29 +1,61 @@
+
 <!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="css/style.css">
+      <!-- Define o conjunto de caracteres da página -->
+    <meta charset="UTF-8">
+        <!-- Responsividade para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Informações do autor da página -->
+    <meta name="author" content="Ke10-Prog">
+        <!-- Descrição da página para motores de busca -->
+    <meta name="description" content="Página inicial do site Ford desafio HTML e CSS">
+        <!-- Palavras-chave para SEO -->
+    <meta name="keywords" content="HTML, CSS, wed Design, Ford">
+        <!-- Link para arquivo CSS externo -->
+    <link rel="stylesheet" href="./css/style.css">
+        <!-- Título que aparece na aba do navegador -->
+    <title>Home</title>
 </head>
 <body>
-  <header>
-        <!-- Cabeçalho com título da página inicial -->
-    <h1>Home</h1>
-        <!-- Menu de navegação, destacando a página atual -->
-    <nav>
-      <a href="index.html" style="font-weight:bold;">Home</a> |
-      <a href="quem-somos.html">Quem Somos</a> |
-      <a href="servicos.html">Serviços</a> |
-      <a href="contato.html">Contato</a>
-    </nav>
-  </header>
-  <main>
-        <!-- Conteúdo principal da página inicial -->
-    <p class="entretenimento">Conteúdo da página de home.</p>
-  </main>
-  <footer>
-        <!-- Rodapé padrão do site -->
-    <p>&copy; 2025 Meu Site Exemplo</p>
-  </footer>
+      <!-- Cabeçalho com logo e menu de navegação -->
+    <header>
+              <!-- Logo da Ford com link para a própria página inicial -->
+        <a href="index.html"><img src="./img/logo-ford-256.png" alt="logo ford" style="max-height: 40px; width: auto;"> 
+        </a>
+                <!-- Menu de navegação principal -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">contato</a>
+        </nav>
+    </header>    
+        <!-- Conteúdo principal da página -->
+        <main>
+        <!-- Imagem de destaque com link (atualmente link vazio "#") -->
+            <a href="lancamento.html"><img src="./img/imagem_1.jpg" alt="Imagem do carro da Ford Storm"></a>
+                    <!-- Texto com chamada para verificar novidades com link para página de lançamentos -->
+            <p>Esta é a nova Ranger ford 2022. Verifique novidades <a href="lancamento.html">aqui</a>
+
+        </main>
+            <!-- Rodapé com links para redes sociais e informações de direitos autorais -->
+        <footer>
+                  <!-- Seção com ícones e links para redes sociais da Ford -->
+            <div class="redes-sociais">
+                <span>Redes Sociais</span>
+                <a href="https://www.facebook.com/FordBrasil" target="_blank"><img src="./img/facebook-50.png" alt="Facebook" class="icon"></a>
+                <a href="https://www.instagram.com/fordbrasil" target="_blank"><img src="./img/instagram-logo-50.png" alt="Instagram" class="icon"></a>
+                <a href="https://www.youtube.com/fordbrasil" target="_blank"><img src="./img/youtube-squared-50.png" alt="Youtube" class="icon"></a>
+                                
+            </div>
+                    <!-- Texto de direitos autorais com link para página de lançamento -->
+            <p><a href="lancamento.html">&copy; 2025 Ford Brasil. Todos os direitos reservados. </a></p>
+                    <!-- Logo da Ford no rodapé -->
+            <img src="./img/ford-96.png" alt="Logo Ford" class="footer-logo-ford"></a>
+            
+            
+        </footer>
+    
 </body>
 </html>

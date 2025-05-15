@@ -1,29 +1,100 @@
+
 <!DOCTYPE html>
+<!-- Define o tipo de documento como HTML5 -->
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Contato</title>
-  <link rel="stylesheet" href="css/style.css">
+      <!-- Define o conjunto de caracteres como UTF-8 -->
+
+    <meta charset="UTF-8">
+        <!-- Garante que a visualização se adapte ao tamanho da tela (responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Informa o autor da página -->
+    <meta name="author" content="Ke10-Prog">
+        <!-- Breve descrição da página para mecanismos de busca -->
+    <meta name="description" content="Página Contato do site Ford desafio HTML e CSS">
+        <!-- Palavras-chave relacionadas ao conteúdo da página -->
+    <meta name="keywords" content="HTML, CSS, wed Design, Ford">
+        <!-- Vincula o arquivo de estilo CSS externo -->
+    <link rel="stylesheet" href="./css/style.css">
+        <!-- Título da aba do navegador -->
+    <title>Contato</title>
 </head>
 <body>
-  <header>
-    <!-- Cabeçalho com título da página Contato -->
-    <h1>Contato</h1>
-    <!-- Menu de navegação com a aba atual destacada -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="quem-somos.html">Quem Somos</a> |
-      <a href="servicos.html">Serviços</a> |
-      <a href="contato.html" style="font-weight:bold;">Contato</a>
-    </nav>
-  </header>
-  <main>
-    <!-- Conteúdo principal da página Contato -->
-    <p>Conteúdo da página de contato.</p>
-  </main>
-  <footer>
-    <!-- Rodapé com copyright -->
-    <p>&copy; 2025 Meu Site Exemplo</p>
-  </footer>
+      <!-- Cabeçalho da página -->
+    <header>
+              <!-- Logotipo da Ford com link para a página inicial -->
+        <a href="index.html"><img src="./img/logo-ford-256.png" alt="logo ford"></a>
+        <nav>
+                  <!-- Menu de navegação principal -->
+            <a href="index.html">Home</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="contato.html">contato</a>
+        </nav>
+    </header>    
+        <!-- Conteúdo principal da página com centralização vertical -->
+        <main class="centralizado">
+                    <!-- Wrapper para aplicar estilos ao formulário -->
+            <div class="form-wrapper">
+                          <!-- Container flexível contendo imagem e formulário lado a lado -->
+                <div class="form-container">
+                                  <!-- Imagem decorativa ao lado do formulário -->
+                    <div class = "image-container">
+                        <img src="./img/xls 2.2 diesel.jpg" alt="Imagem do carro Ford">
+                    </div>
+                                 <!-- Formulário de contato -->           
+                <form>
+                    <h2>Sobre você</h2>
+                                        <!-- Campo de nome com marcador e obrigatoriedade -->
+                    <label></label>
+                    <input type="text" placeholder="NOME*" required />
+                                        <!-- Campo de e-mail (apesar de estar como type="text", deveria ser type="email") -->
+                    <label></label>
+                    <input type="email" placeholder="exemplo@email.com*" required />
+                    <!-- Campo de telefone com validação de e-mail aplicada incorretamente (type="email") -->
+
+                    <label></label>
+                    <input type="telefone"  placeholder="(00)00000-0000*" required />
+                    <!-- Campo de seleção de tipo de mensagem -->
+
+                    <label></label>
+                    
+
+                    <select required>
+                         <option value="" disabled selected>Selecione uma opção</option>
+                         <option>Elogio</option>
+                         <option>Reclamação</option>
+                         <option>Solicitação</option>
+                    </select>
+                                        <!-- Campo de texto para a mensagem do usuário -->
+                    <textarea placeholder="Digite sua mensagem aqui..." required></textarea>
+                                    <!-- Botão para envio do formulário -->
+                    <button type="submit">Enviar</button>
+                </form>
+                </div>
+            </div>
+                
+            
+        </main>
+            <!-- Rodapé da página -->
+        <footer>
+                  <!-- Seção com links das redes sociais -->
+            <div class="redes-sociais">
+                <span>Redes Sociais</span>
+                            <!-- Link para o Facebook com ícone -->
+                <a href="https://www.facebook.com/FordBrasil" target="_blank"><img src="./img/facebook-50.png" alt="Facebook" class="icon"></a>
+                            <!-- Link para o Instagram com ícone -->
+                <a href="https://www.instagram.com/fordbrasil" target="_blank"><img src="./img/instagram-logo-50.png" alt="Instagram" class="icon"></a>
+                            <!-- Link para o YouTube com ícone -->
+                <a href="https://www.youtube.com/fordbrasil" target="_blank"><img src="./img/youtube-squared-50.png" alt="Youtube" class="icon"></a>
+                                
+            </div>
+                    <!-- Texto de direitos autorais com link para a página de lançamento -->
+            <p><a href="lancamento.html">&copy; 2025 Ford Brasil. Todos os direitos reservados. </a></p>
+                    <!-- Logotipo da Ford no rodapé -->
+            <img src="./img/ford-96.png" alt="Logo Ford" class="footer-logo-ford">
+            
+            
+        </footer>
+    
 </body>
-</html>
